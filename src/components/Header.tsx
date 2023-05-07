@@ -18,7 +18,7 @@ const Header: NextPage<Props> = ({ title }) => {
       <div className={style["contents-wrapper"]}>
         {contents.map((content) => {
           return (
-            <div className={style["contents-link"]}>
+            <div className={style["contents-link"]} key={content.title}>
               <Link href={content.path}>
                 <h2>{content.title}</h2>
               </Link>
